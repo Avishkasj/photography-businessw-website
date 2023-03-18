@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
-	<title>Image Gallery</title>
-	<style>
-		/* Styles for the thumbnail images */
-		
-	</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
 
 <!-- nav bar -->
@@ -17,8 +12,8 @@
     <a href=""><div class="logo">
         <img src="img/cover.png" width="250px" alt="Ambient Spaces Photography">
       </div></a>
-  <a href="index.html" >Home</a>
-  <a href="portfolio.html" class="active">Portfolio</a>
+  <a href="#home" class="active">Home</a>
+  <a href="portfolio.html">Portfolio</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -26,40 +21,39 @@
   </a>
 </div>
 
+
 <!-- gallery -->
 
-	<div class="gallery2">
-		<img class="thumbnail" src="img/img3.jpg" alt="Image 1">
-		<img class="thumbnail" src="img/img3.jpg" alt="Image 2">
-		<img class="thumbnail" src="img/img3.jpg" alt="Image 3">
-		<img class="thumbnail" src="img/img3.jpg" alt="Image 4">
-        <img class="thumbnail" src="img/img3.jpg" alt="Image 1">
-		<img class="thumbnail" src="img/img3.jpg" alt="Image 2">
-		<img class="thumbnail" src="img/img3.jpg" alt="Image 3">
-		<img class="thumbnail" src="img/img3.jpg" alt="Image 4">
-        <img class="thumbnail" src="img/img3.jpg" alt="Image 1">
-		<img class="thumbnail" src="img/img3.jpg" alt="Image 2">
-		<img class="thumbnail" src="img/img3.jpg" alt="Image 3">
-		<img class="thumbnail" src="img/img3.jpg" alt="Image 4">
-	</div>
+<div class="gallery2">
+    <img class="thumbnail" src="img/img3.jpg" alt="Image 1">
+    <img class="thumbnail" src="img/img3.jpg" alt="Image 2">
+    <img class="thumbnail" src="img/img3.jpg" alt="Image 3">
+    <img class="thumbnail" src="img/img3.jpg" alt="Image 4">
+    <img class="thumbnail" src="img/img3.jpg" alt="Image 1">
+    <img class="thumbnail" src="img/img3.jpg" alt="Image 2">
+    <img class="thumbnail" src="img/img3.jpg" alt="Image 3">
+    <img class="thumbnail" src="img/img3.jpg" alt="Image 4">
+    <img class="thumbnail" src="img/img3.jpg" alt="Image 1">
+    <img class="thumbnail" src="img/img3.jpg" alt="Image 2">
+    <img class="thumbnail" src="img/img3.jpg" alt="Image 3">
+    <img class="thumbnail" src="img/img3.jpg" alt="Image 4">
+</div>
 
-	<div class="enlarged">
-		<div class="container">
-			<span class="close">&times;</span>
-			<img class="enlarged-image" src="">
-		</div>
-	</div>
+<div class="enlarged">
+    <div class="container">
+        <span class="close">&times;</span>
+        <img class="enlarged-image" src="">
+    </div>
+</div>
 
-
-     <!-- footer -->
+  <!-- footer -->
   
   <footer>
     <p>&copy; 2023 Ambient Spaces Photography. All rights reserved.</p>
   </footer>
+  
 
-	<script>
-
-
+<script>
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -71,30 +65,32 @@ function myFunction() {
 
 
 
-		// Get the gallery container and the enlarged image container
-		const galleryContainer = document.querySelector('.gallery2');
-		const enlargedContainer = document.querySelector('.enlarged');
+// Get the gallery container and the enlarged image container
+const galleryContainer = document.querySelector('.gallery2');
+        const enlargedContainer = document.querySelector('.enlarged');
 
-		// Add a click event listener to the gallery container
-		galleryContainer.addEventListener('click', (event) => {
-			// Get the clicked thumbnail image
-			const thumbnailImage = event.target.closest('img.thumbnail');
-			if (!thumbnailImage) return;
+        // Add a click event listener to the gallery container
+        galleryContainer.addEventListener('click', (event) => {
+            // Get the clicked thumbnail image
+            const thumbnailImage = event.target.closest('img.thumbnail');
+            if (!thumbnailImage) return;
 
-			// Show the enlarged image container
-			enlargedContainer.style.display = 'flex';
+            // Show the enlarged image container
+            enlargedContainer.style.display = 'flex';
 
-			// Set the source of the enlarged image to the clicked thumbnail image's source
-			const enlargedImage = enlargedContainer.querySelector('.enlarged-image');
-			enlargedImage.src = thumbnailImage.src;
-		});
+            // Set the source of the enlarged image to the clicked thumbnail image's source
+            const enlargedImage = enlargedContainer.querySelector('.enlarged-image');
+            enlargedImage.src = thumbnailImage.src;
+        });
 
-		// Add a click event listener to the close button
-		const closeButton = enlargedContainer.querySelector('.close');
-		closeButton.addEventListener('click', () => {
-			// Hide the enlarged image container
-			enlargedContainer.style.display = 'none';
-		});
-	</script>
+        // Add a click event listener to the close button
+        const closeButton = enlargedContainer.querySelector('.close');
+        closeButton.addEventListener('click', () => {
+            // Hide the enlarged image container
+            enlargedContainer.style.display = 'none';
+        });
+
+</script>
+
 </body>
 </html>
