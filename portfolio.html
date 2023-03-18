@@ -11,6 +11,23 @@
 
 
 <body>
+
+<!-- nav bar -->
+<div class="topnav" id="myTopnav">
+    <a href=""><div class="logo">
+        <img src="img/cover.png" width="250px" alt="Ambient Spaces Photography">
+      </div></a>
+  <a href="index.html" >Home</a>
+  <a href="portfolio.html" class="active">Portfolio</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<!-- gallery -->
+
 	<div class="gallery2">
 		<img class="thumbnail" src="img/img3.jpg" alt="Image 1">
 		<img class="thumbnail" src="img/img3.jpg" alt="Image 2">
@@ -33,7 +50,27 @@
 		</div>
 	</div>
 
+
+     <!-- footer -->
+  
+  <footer>
+    <p>&copy; 2023 Ambient Spaces Photography. All rights reserved.</p>
+  </footer>
+
 	<script>
+
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+
+
 		// Get the gallery container and the enlarged image container
 		const galleryContainer = document.querySelector('.gallery2');
 		const enlargedContainer = document.querySelector('.enlarged');
