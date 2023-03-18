@@ -305,4 +305,50 @@ body {
   .social-media-icon:hover {
     transform: scale(1.1);
   }
+
+
+
+  /* contact us page */
+  /* Style the form label */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Style the form input */
+  input, textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  /* Style the form submit button */
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Style the form submit button on hover */
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Style the form error message */
+  #error-message {
+    color: red;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
   
