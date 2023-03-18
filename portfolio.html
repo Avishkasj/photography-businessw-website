@@ -1,129 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>My Portfolio</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f2f2f2;
-        margin: 0;
-        padding: 0;
-      }
-      
-      header {
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-      }
-      
-      h1 {
-        margin: 0;
-        font-size: 36px;
-      }
-      
-      .container {
-        max-width: 1200px;
-        margin: auto;
-        padding: 20px;
-      }
-      
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 20px;
-      }
-      
-      .thumbnail {
-        position: relative;
-        overflow: hidden;
-        cursor: pointer;
-      }
-      
-      .thumbnail img {
-        width: 100%;
-        height: auto;
-        transition: transform 0.3s ease;
-      }
-      
-      .thumbnail:hover img {
-        transform: scale(1.1);
-      }
-      
-      .overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        padding: 10px;
-        text-align: center;
-      }
-      
-      .thumbnail:hover .overlay {
-        visibility: visible;
-        opacity: 1;
-      }
-      
-      .overlay p {
-        margin: 0;
-        font-size: 18px;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>My Portfolio</h1>
-    </header>
-    
-    <div class="container">
-      <div class="gallery">
-        <div class="thumbnail">
-          <img src="img/img3.jpg" alt="Image 1">
-          <div class="overlay">
-            <p>Image 1</p>
-          </div>
-        </div>
-        
-        <div class="thumbnail">
-          <img src="image2.jpg" alt="Image 2">
-          <div class="overlay">
-            <p>Image 2</p>
-          </div>
-        </div>
-        
-        <div class="thumbnail">
-          <img src="image3.jpg" alt="Image 3">
-          <div class="overlay">
-            <p>Image 3</p>
-          </div>
-        </div>
-        
-        <div class="thumbnail">
-          <img src="image4.jpg" alt="Image 4">
-          <div class="overlay">
-            <p>Image 4</p>
-          </div>
-        </div>
-        
-        <div class="thumbnail">
-          <img src="image5.jpg" alt="Image 5">
-          <div class="overlay">
-            <p>Image 5</p>
-          </div>
-        </div>
-        
-        <div class="thumbnail">
-          <img src="image6.jpg" alt="Image 6">
-          <div class="overlay">
-            <p>Image 6</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+<head>
+    <link rel="stylesheet" href="style.css">
+	<title>Image Gallery</title>
+	<style>
+		/* Styles for the thumbnail images */
+		
+	</style>
+</head>
+
+
+<body>
+	<div class="gallery2">
+		<img class="thumbnail" src="img/img3.jpg" alt="Image 1">
+		<img class="thumbnail" src="img/img3.jpg" alt="Image 2">
+		<img class="thumbnail" src="img/img3.jpg" alt="Image 3">
+		<img class="thumbnail" src="img/img3.jpg" alt="Image 4">
+        <img class="thumbnail" src="img/img3.jpg" alt="Image 1">
+		<img class="thumbnail" src="img/img3.jpg" alt="Image 2">
+		<img class="thumbnail" src="img/img3.jpg" alt="Image 3">
+		<img class="thumbnail" src="img/img3.jpg" alt="Image 4">
+        <img class="thumbnail" src="img/img3.jpg" alt="Image 1">
+		<img class="thumbnail" src="img/img3.jpg" alt="Image 2">
+		<img class="thumbnail" src="img/img3.jpg" alt="Image 3">
+		<img class="thumbnail" src="img/img3.jpg" alt="Image 4">
+	</div>
+
+	<div class="enlarged">
+		<div class="container">
+			<span class="close">&times;</span>
+			<img class="enlarged-image" src="">
+		</div>
+	</div>
+
+	<script>
+		// Get the gallery container and the enlarged image container
+		const galleryContainer = document.querySelector('.gallery2');
+		const enlargedContainer = document.querySelector('.enlarged');
+
+		// Add a click event listener to the gallery container
+		galleryContainer.addEventListener('click', (event) => {
+			// Get the clicked thumbnail image
+			const thumbnailImage = event.target.closest('img.thumbnail');
+			if (!thumbnailImage) return;
+
+			// Show the enlarged image container
+			enlargedContainer.style.display = 'flex';
+
+			// Set the source of the enlarged image to the clicked thumbnail image's source
+			const enlargedImage = enlargedContainer.querySelector('.enlarged-image');
+			enlargedImage.src = thumbnailImage.src;
+		});
+
+		// Add a click event listener to the close button
+		const closeButton = enlargedContainer.querySelector('.close');
+		closeButton.addEventListener('click', () => {
+			// Hide the enlarged image container
+			enlargedContainer.style.display = 'none';
+		});
+	</script>
+</body>
 </html>
