@@ -22,27 +22,36 @@
 </div>
 
 <!-- contact -->
+
+<div class="form">
 <form id="contact-form">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    
-    <label for="event-date">Event Date:</label>
-    <input type="date" id="event-date" name="event-date" required>
-    
-    <label for="event-location">Event Location:</label>
-    <input type="text" id="event-location" name="event-location" required>
-    
-    <label for="event-type">Event Type:</label>
-    <input type="text" id="event-type" name="event-type" required>
-    
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" required></textarea>
-    
-    <input type="submit" value="Submit">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email address:</label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+    <div class="form-group">
+      <label for="event-date">Date of Event:</label>
+      <input type="date" class="form-control" id="event-date" required>
+    </div>
+    <div class="form-group">
+      <label for="event-location">Location of Event:</label>
+      <input type="text" class="form-control" id="event-location" required>
+    </div>
+    <div class="form-group">
+      <label for="event-type">Type of Event:</label>
+      <input type="text" class="form-control" id="event-type" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea class="form-control" id="message" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+</div>
   
 
   
@@ -52,62 +61,9 @@
   <footer>
     <p>&copy; 2023 Ambient Spaces Photography. All rights reserved.</p>
   </footer>
+
   
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-
-
-
-// Get the form element
-var contactForm = document.getElementById("contact-form");
-
-// Add an event listener for the form submit event
-contactForm.addEventListener("submit", function(event) {
-  event.preventDefault(); // Prevent the form from submitting normally
-  
-  // Get the form data
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var eventDate = document.getElementById("event-date").value;
-  var eventLocation = document.getElementById("event-location").value;
-  var eventType = document.getElementById("event-type").value;
-  var message = document.getElementById("message").value;
-  
-  // Send the form data to a server-side script using AJAX
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", "process-form.php");
-  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
-      if (xhr.status === 200) {
-        // Handle the success response from the server
-        alert("Thank you for contacting us!");
-        contactForm.reset();
-      } else {
-        // Handle the error response from the server
-        alert("There was an error submitting the form.");
-      }
-    }
-  };
-  var formData = "name=" + encodeURIComponent(name) +
-                 "&email=" + encodeURIComponent(email) +
-                 "&event-date=" + encodeURIComponent(eventDate) +
-                 "&event-location=" + encodeURIComponent(eventLocation) +
-                 "&event-type=" + encodeURIComponent(eventType) +
-                 "&message=" + encodeURIComponent(message);
-  xhr.send(formData);
-});
-
-
-</script>
+  <script src="script.js"></script>
 
 </body>
 </html>
