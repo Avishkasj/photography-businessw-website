@@ -21,23 +21,58 @@
   </a>
 </div>
 
-<!-- about -->
-<div class="about-us">
-    <div class="about-image">
-      <img src="img/img3.jpg" alt="About Us">
-    </div>
-    <div class="about-content">
-      <h1>About Us</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod diam quis diam ultrices, eu bibendum eros elementum. Vivamus volutpat, sapien sed varius bibendum, felis lectus faucibus felis, eu consectetur tellus est a enim.</p>
-      <p>Morbi accumsan nibh vel odio lobortis malesuada. Nulla lacinia justo nisi, eu rhoncus mi interdum eget. Nulla facilisi. Nullam eu arcu ligula. Nam volutpat vestibulum aliquam. Aliquam commodo nisi vel nunc eleifend imperdiet. Pellentesque congue diam a diam fringilla fringilla.</p>
+
+<!-- main iamge -->
+<div class="header">
+    <img src="img/img5.jpg" alt="Header Image">
+    <div class="text">
+        <h3>About.</h3>
+        <!-- <h1>Responsive Image Header Full Width</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo magna. Nulla facilisi. Nullam hendrerit diam id neque commodo, eu scelerisque turpis tincidunt.</p> -->
     </div>
   </div>
-  
+
+<!-- about -->
+<main>
+    <section class="a">
+        <div class="ab">
+            <h2>Our History</h2>
+            <p>Our journey began when our founder, [insert name], discovered the world of drone photography. With a love for extreme sports and a desire to capture their intensity from a unique perspective, [insert name] began experimenting with aerial photography. What started as a hobby quickly turned into a passion, and Ambient Spaces Photography was born.
+            </p>
+        </div>
+        
+        <div class="ab">
+            <h2>Our Ethos</h2>
+            <p>At Ambient Spaces Photography, our ethos is centered around our passion for capturing stunning aerial images of extreme sports and our commitment to excellence in everything we do.
+                We believe that every photograph we take is an opportunity to tell a story, to capture a moment of beauty, and to inspire others. Our goal is to not only create visually stunning images but also to evoke emotion and create a sense of connection with our viewers.</p>
+        </div>
+    </section>
+    
+    <section class="a">
+        <div class="ab">
+            <h2>Qualifications and Experience</h2>
+            <p>At Ambient Spaces Photography, we have a team of highly skilled and experienced photographers who specialize in aerial stills photography using drones. Our team has years of experience capturing stunning images of extreme sports and events from unique and breathtaking angles.<br> Our photographers have undergone extensive training and hold the necessary qualifications and certifications required for operating drones safely and legally. We adhere to all local and national regulations and have a thorough understanding of airspace restrictions</p>
+        </div>
+        
+        <div class="ab">
+            <h2>Our Services</h2>
+            <p>At Ambient Spaces Photography, we offer a range of services to capture stunning aerial images of extreme sports and events. Our services include:
+
+                Aerial Photography: We specialize in aerial stills photography using drones to capture stunning images of extreme sports and events from unique and breathtaking angles.
+                
+                Event Photography: We provide event photography services for a range of extreme sports and events, capturing the excitement and energy of the event in stunning detail.
+                
+                Creative Services: We offer a range of creative services, including photo editing and retouching, to ensure that your images are of the highest quality.
+                
+                Consultation: We provide consultation services to help clients determine the best approach to capturing their event or sports activity. We work closely with clients to understand their needs and provide customized solutions to meet their specific requirements.</p>
+        </div>
+    </section>
+</main>
 
   <!-- footer -->
   
   <footer>
-    <p>&copy; 2023 Ambient Spaces Photography. All rights reserved.</p>
+    <p>&copy; 2023 Ambient Spaces Photography.</p>
   </footer>
   
 
@@ -50,33 +85,6 @@ function myFunction() {
     x.className = "topnav";
   }
 }
-
-
-
-// Get the gallery container and the enlarged image container
-const galleryContainer = document.querySelector('.gallery2');
-        const enlargedContainer = document.querySelector('.enlarged');
-
-        // Add a click event listener to the gallery container
-        galleryContainer.addEventListener('click', (event) => {
-            // Get the clicked thumbnail image
-            const thumbnailImage = event.target.closest('img.thumbnail');
-            if (!thumbnailImage) return;
-
-            // Show the enlarged image container
-            enlargedContainer.style.display = 'flex';
-
-            // Set the source of the enlarged image to the clicked thumbnail image's source
-            const enlargedImage = enlargedContainer.querySelector('.enlarged-image');
-            enlargedImage.src = thumbnailImage.src;
-        });
-
-        // Add a click event listener to the close button
-        const closeButton = enlargedContainer.querySelector('.close');
-        closeButton.addEventListener('click', () => {
-            // Hide the enlarged image container
-            enlargedContainer.style.display = 'none';
-        });
 
 </script>
 

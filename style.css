@@ -231,37 +231,37 @@ body {
 }
 
 /* about us */
-.about-us {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    background-color: #fff;
-  }
-  
-  .about-image {
-    flex: 1;
-    margin-right: 50px;
-  }
-  
-  .about-image img {
-    width: 100%;
-  }
-  
-  .about-content {
-    flex: 2;
-  }
-  
-  .about-content h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  .about-content p {
-    font-size: 18px;
+
+
+
+main {
+    margin: 20px;
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+p {
     line-height: 1.5;
+}
+
+.a {
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 20px;
-  }
+}
+
+.ab {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
   
 
 
@@ -313,6 +313,7 @@ body {
 
   .form{
     margin: 30px;
+    margin-bottom: 80px;
   }
 
   .form-control {
