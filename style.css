@@ -34,7 +34,7 @@ body {
     display: none;
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 620px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
@@ -42,7 +42,7 @@ body {
     }
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 620px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
       position: absolute;
@@ -235,7 +235,7 @@ body {
 
 
 main {
-    margin: 20px;
+    margin: 50px;
     margin-bottom: 60px;
 }
 
@@ -255,7 +255,7 @@ p {
 }
 
 .ab {
-    flex: 1;
+    flex: 2;
     margin: 10px;
     padding: 10px;
     background-color: #eee;
